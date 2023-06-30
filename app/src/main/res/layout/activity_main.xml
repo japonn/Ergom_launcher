@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="141dp"
+        android:layout_height="58dp"
+        android:src="@drawable/ergomlogo"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/startAppButton4"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        android:text="INTRANET"
+        android:textSize="30sp"
+        android:layout_margin="30dp"
+        android:background="@drawable/button_background"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/startAppButton3"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_toEndOf="@id/startAppButton4"
+        android:layout_centerVertical="true"
+        android:text="Ergom"
+        android:textSize="30sp"
+        android:background="@drawable/button_background"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/startAppButton"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_toStartOf="@id/startAppButton4"
+        android:layout_centerVertical="true"
+        android:text="WSS"
+        android:textSize="30sp"
+        android:background="@drawable/button_background"
+        android:textColor="#FFFFFF" />
+
+
+
+
+
+</RelativeLayout>
