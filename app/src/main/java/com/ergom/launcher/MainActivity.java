@@ -90,7 +90,7 @@ public class MainActivity extends Activity {
         handler = new Handler();
 
         // Format godziny (np. 12:34 PM)
-        timeFormat = new SimpleDateFormat("hh:mm", Locale.getDefault());
+        timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
         // Cykliczne odświeżanie co sekundę
         handler.postDelayed(timeRunnable, 1000);
