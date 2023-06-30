@@ -10,6 +10,9 @@ Administrator can leave kiosk mode through shortcut (5 times click on IP in the 
 App boots with system.
 
 Usefull commands:
+
 adb shell dpm set-device-owner com.ergom.launcher/.MyDeviceAdminReceiver
+
 adb shell dpm remove-active-admin com.ergom.launcher/.MyDeviceAdminReceiver
+
 adb uninstall com.ergom.launcher
