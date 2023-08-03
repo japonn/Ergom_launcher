@@ -27,12 +27,15 @@ import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
 public class MainActivity extends Activity {
 
     private static final int REQUEST_CODE_ENABLE_ADMIN = 1;
     private static final String KIOSK_PACKAGE = "com.ergom.launcher";
     private static final String CHROME_PACKAGE = "com.android.chrome";
-    private static final String[] APP_PACKAGES = {KIOSK_PACKAGE, CHROME_PACKAGE};
+    private static final String DRIVE_PACKAGE = "com.google.android.apps.docs";
+
+    private static final String[] APP_PACKAGES = {KIOSK_PACKAGE, CHROME_PACKAGE, DRIVE_PACKAGE};
     private TextView timeTextView;
     private Handler handler;
     private SimpleDateFormat timeFormat;
@@ -40,8 +43,10 @@ public class MainActivity extends Activity {
     private Timer timer;
     private static final int MAX_CLICK_COUNT = 5;
     private int clickCount = 0;
-    private static final String PASSWORD = "qwerty";
-
+    private static final String PASSWORD = "trudne!202";
+    private static final String WMS = "http://192.168.45.245:9000/Execute/Display";
+    private static final String SCADA = "http://scada-mes-test.lodz.ergom.com/visualization/operator/1/sign-in";
+    private static final String WEBCON = "http://192.168.45.240/UrlopyTest/SitePages/Strona%20g%C5%82%C3%B3wna.aspx";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,13 +72,13 @@ public class MainActivity extends Activity {
         ComponentName deviceAdmin = new ComponentName(this, MyDeviceAdminReceiver.class);
 
         Button startAppButton = findViewById(R.id.startAppButton);
-        startAppButton.setOnClickListener(v -> openWebsite("http://192.168.42.237/"));
+        startAppButton.setOnClickListener(v -> openWebsite(WMS));
 
         Button startAppButton3 = findViewById(R.id.startAppButton3);
-        startAppButton3.setOnClickListener(v -> openWebsite("https://www.ergom.com/"));
+        startAppButton3.setOnClickListener(v -> openWebsite(WEBCON));
 
         Button startAppButton4 = findViewById(R.id.startAppButton4);
-        startAppButton4.setOnClickListener(v -> openWebsite("http://192.168.42.115/ergom/"));
+        startAppButton4.setOnClickListener(v -> openWebsite(SCADA));
 
         if (devicePolicyManager.isDeviceOwnerApp(getPackageName())) {
             setKioskModeEnabled();

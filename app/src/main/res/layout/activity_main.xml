@@ -18,7 +18,7 @@
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_centerInParent="true"
-        android:text="INTRANET"
+        android:text="SCADA"
         android:textSize="30sp"
         android:layout_margin="30dp"
         android:background="@drawable/button_background"
@@ -30,7 +30,7 @@
         android:layout_height="180dp"
         android:layout_toEndOf="@id/startAppButton4"
         android:layout_centerVertical="true"
-        android:text="Ergom"
+        android:text="WEBCON"
         android:textSize="30sp"
         android:background="@drawable/button_background"
         android:textColor="#FFFFFF" />
@@ -41,7 +41,7 @@
         android:layout_height="180dp"
         android:layout_toStartOf="@id/startAppButton4"
         android:layout_centerVertical="true"
-        android:text="WSS"
+        android:text="WMS"
         android:textSize="30sp"
         android:background="@drawable/button_background"
         android:textColor="#FFFFFF" />
